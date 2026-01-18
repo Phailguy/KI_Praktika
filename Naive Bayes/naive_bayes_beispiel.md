@@ -16,10 +16,12 @@
 
 ## 1. Klassenwahrscheinlichkeiten
 
--   O: 4\
--   M: 3
+O: 4\
+M: 3
 
-\[ P(O)=`\frac{4}{7}`{=tex}, `\quad `{=tex}P(M)=`\frac{3}{7}`{=tex} \]
+$$
+P(O)=\frac{4}{7}, \quad P(M)=\frac{3}{7}
+$$
 
 ------------------------------------------------------------------------
 
@@ -32,23 +34,26 @@
   ≥35     2   2
   \<35    2   1
 
-\[ P(\<35\|O)=0.5, `\quad `{=tex}P(\<35\|M)=`\frac{1}{3}`{=tex} \]
+$$
+P(<35 \mid O)=0.5, \quad P(<35 \mid M)=\frac{1}{3}
+$$
 
 ------------------------------------------------------------------------
 
-### Einkommen (mit Laplace)
+### Einkommen (Laplace-Glättung)
 
   Einkommen   O   M
   ----------- --- ---
   hoch        4   1
   niedrig     0   2
 
-\[ P(niedrig\|O)=`\frac{1}{6}`{=tex},
-`\quad `{=tex}P(niedrig\|M)=`\frac{3}{5}`{=tex} \]
+$$
+P(\text{niedrig} \mid O)=\frac{1}{6}, \quad P(\text{niedrig} \mid M)=\frac{3}{5}
+$$
 
 ------------------------------------------------------------------------
 
-### Bildung (mit Laplace)
+### Bildung (Laplace-Glättung)
 
   Bildung    O   M
   ---------- --- ---
@@ -56,8 +61,9 @@
   Bachelor   1   1
   Master     2   0
 
-\[ P(Bachelor\|O)=`\frac{2}{7}`{=tex},
-`\quad `{=tex}P(Bachelor\|M)=`\frac{1}{3}`{=tex} \]
+$$
+P(\text{Bachelor} \mid O)=\frac{2}{7}, \quad P(\text{Bachelor} \mid M)=\frac{1}{3}
+$$
 
 ------------------------------------------------------------------------
 
@@ -71,20 +77,24 @@
 
 ### Für Klasse O
 
-\[ P(O\|x) `\propto `{=tex}`\frac{4}{7}`{=tex} `\cdot 0.5`{=tex}
-`\cdot `{=tex}`\frac{1}{6}`{=tex} `\cdot `{=tex}`\frac{2}{7}`{=tex} =
-0.0136 \]
+$$
+P(O \mid x) \propto \frac{4}{7} \cdot 0.5 \cdot \frac{1}{6} \cdot \frac{2}{7}
+= 0.0136
+$$
 
 ### Für Klasse M
 
-\[ P(M\|x) `\propto `{=tex}`\frac{3}{7}`{=tex}
-`\cdot `{=tex}`\frac{1}{3}`{=tex} `\cdot `{=tex}`\frac{3}{5}`{=tex}
-`\cdot `{=tex}`\frac{1}{3}`{=tex} = 0.0286 \]
+$$
+P(M \mid x) \propto \frac{3}{7} \cdot \frac{1}{3} \cdot \frac{3}{5} \cdot \frac{1}{3}
+= 0.0286
+$$
 
 ------------------------------------------------------------------------
 
 ## 4. Entscheidung
 
-\[ P(M\|x) \> P(O\|x) \]
+$$
+P(M \mid x) > P(O \mid x)
+$$
 
-➡️ **Naive Bayes klassifiziert das Beispiel als Kandidat M**
+➡️ **Klassifikation: Kandidat M**
